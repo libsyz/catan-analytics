@@ -18,6 +18,7 @@ GEM
     diff-lcs (1.3)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    equatable (0.6.1)
     faker (2.6.0)
       i18n (>= 1.6, < 1.8)
     http-accept (1.7.0)
@@ -35,6 +36,9 @@ GEM
     parallel (1.18.0)
     parser (2.6.5.0)
       ast (~> 2.4.0)
+    pastel (0.7.3)
+      equatable (~> 0.6)
+      tty-color (~> 0.5)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -67,7 +71,10 @@ GEM
       unicode-display_width (>= 1.4.0, < 1.7)
     ruby-progressbar (1.10.1)
     sqlite3 (1.4.1)
+    terminal-table (1.8.0)
+      unicode-display_width (~> 1.1, >= 1.1.1)
     thread_safe (0.3.6)
+    tty-color (0.5.1)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unf (0.1.4)
@@ -82,12 +89,14 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   faker
+  pastel
   pry
   rake
   rest-client
   rspec
   rubocop
   sqlite3
+  terminal-table
 
 BUNDLED WITH
    1.17.2
