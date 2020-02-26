@@ -8,13 +8,17 @@ task :rubocop do
   sh 'rubocop --format simple || true'
 end
 
+desc 'Run the program'
+task :run do
+  sh 'bundle exec ruby -W0 app.rb'
+end
+
 task default: [:rubocop, :spec]
 
 desc 'Open an irb session preloaded with the environment'
 task :console do
   require 'rubygems'
   require 'pry'
-
   Pry.start
 end
 

@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'thor'
 gem 'pry'
 gem 'rest-client'
 gem 'faker'
@@ -10,3 +11,4 @@ gem 'sqlite3'
 gem 'rubocop'
 gem 'terminal-table'
 gem 'pastel'
+gem 'pry-byebug'
