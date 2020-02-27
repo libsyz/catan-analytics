@@ -47,7 +47,9 @@ class Game < ActiveRecord::Base
               pastel.decorate("Winner", :on_green, :dim),
               pastel.decorate(self.winner, :on_green, :dim)]
 
-    table = Terminal::Table.new :title => "Catan Game Summary", :headings => ['Dice Roll', 'Frequency', 'Expected Probability', 'Observed Probability'], :rows => rows
+    table = Terminal::Table.new :title => "Catan Game Summary - #{pretty_date}",
+                                :headings => ['Dice Roll', 'Frequency', 'Expected Probability', 'Observed Probability'],
+                                :rows => rows
     puts table
   end
 

@@ -24,6 +24,7 @@ end
 def show_options
   puts "1 - Record a new game"
   puts "2 - Analyze a past game"
+  puts "3 - See Hall of Fame"
 end
 
 print_welcome
@@ -37,6 +38,8 @@ while quit == false
       @game_controller.start_game
     when "2"
       @game_controller.analyze_game
+    when "3"
+      @game_controller.hall_of_fame
     when "q"
       quit = true
     else

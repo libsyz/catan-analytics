@@ -18,6 +18,12 @@ class GamesController
     Game.find(selection).dice_count
   end
 
+  def hall_of_fame
+    games = Game.all
+    victories = games.group_by { |game| game.winner }
+    victories.transform_values!(&:count)
+    @view.hall_of_fame(victories.sort_by { |k, v| -v })
+  end
 
   private
 

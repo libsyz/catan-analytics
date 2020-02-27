@@ -13,4 +13,10 @@ class GamesView
     print ">"
     input = gets.chomp
   end
+
+  def hall_of_fame(victories_arr)
+    victories_arr.each do |pair|
+      puts "#{pair[0]} - #{pair[1]} victories"
+    end
+  end
 end
