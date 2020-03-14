@@ -9,7 +9,6 @@ class Game < ActiveRecord::Base
     Pastel.new
   end
 
-
   PROBS = {
    2=>0.027777777777777776,
    3=>0.05555555555555555,
