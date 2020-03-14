@@ -36,6 +36,7 @@ class GamesController
     end
 
     @view.finish_game(@game.dice_rolls.count)
+    @game.winner = @view.ask_for_winner
     @game.save
   end
 

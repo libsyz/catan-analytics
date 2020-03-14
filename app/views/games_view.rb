@@ -14,6 +14,11 @@ class GamesView
     input = gets.chomp
   end
 
+  def ask_for_winner
+    puts "Game is over! Who won?"
+    input = gets.chomp
+  end
+
   def hall_of_fame(victories_arr)
     victories_arr.each do |pair|
       puts "#{pair[0]} - #{pair[1]} victories"
